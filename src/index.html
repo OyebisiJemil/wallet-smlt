@@ -21,6 +21,14 @@
 
 <body>
   <app-root></app-root>
+  <script>
+    var process = {env : {NODE_ENV: 'production'}}
+  </script>
+  <script>
+    if (global === undefined) {
+      var global = window;
+    }
+  </script>
 </body>
 
 </html>

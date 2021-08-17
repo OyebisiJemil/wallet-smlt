@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Create Wallet Address</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <div>
+        <p>Since this is the first time you are using this wallet, you'll need to create a wallet address</p>
+        <p>swipe to the right to create your wallet address</p>
+
+        <ion-text color="danger">
+          <p>Please make sure you remember your password! If you lose your password, you CAN'T retrive it back </p>
+        </ion-text>
+        
+      </div>
+
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+      <form [formGroup]="accountForm" (ngSubmit)="accountForm.valid && createAccount()">
+        <ion-list>
+          <ion-item>
+            <ion-label position="stacked">Input password</ion-label>
+            <ion-input type="text" formControlName="password"></ion-input>
+          </ion-item>
+   
+            <ion-button color="secondary" expand="block" (click)="createAccount()">Create Account</ion-button>
+        </ion-list>
+      </form>
+    </ion-card>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

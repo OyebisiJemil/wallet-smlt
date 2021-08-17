@@ -1,0 +1,39 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="secondary" (click)="close()">Back
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      <h6>Enter amount</h6>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div style="margin-top: 30%;">
+    <form [formGroup]="tokenForm" novalidate>
+    <ion-grid>
+      <ion-item lines="full">
+      <ion-row>
+        <ion-col size="6" class="ion-align-item-end" style="text-align: end;">
+          <ion-input formControlName="unit" style="font-size: 40px;" type="number" value="0" autofocus="true"></ion-input>
+        </ion-col>
+        <ion-col size="6" class="ion-align-item-start" style="text-align: start; font-size: 40px;">
+          smlt
+        </ion-col>
+      </ion-row>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-input formControlName="recipientAddress" type="text" placeholder="Address / click icon to scan code" required></ion-input>
+        <ion-icon name="barcode" slot="end"></ion-icon>
+      </ion-item>
+    </ion-grid>
+  </form>
+  </div>
+  
+</ion-content>
+<ion-footer>
+  <ion-button type="submit" class="ion-margin" color="secondary" expand="block" (click)="submitForm()">Send</ion-button>
+</ion-footer>

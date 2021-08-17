@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="close()">Back
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      <h6>Receive SampleToken</h6>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false">
+  <div style="margin: 5%;">
+    <div class="text-center" style="text-align: center; margin-top: 20%; margin-bottom: 10%;">
+      <ion-card>
+        <ngx-qrcode  [value]="address">
+        </ngx-qrcode>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

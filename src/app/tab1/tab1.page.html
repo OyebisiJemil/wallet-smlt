@@ -1,17 +1,33 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-buttons slot="start">
+      <h6>SMLT Wallet</h6>
+   </ion-buttons>
+   <ion-title color="success"></ion-title>
+   <ion-buttons slot="end">     
+     <ion-button color="secondary" (click)="showAddressModal()">
+       <ion-icon slot="end" name="barcode"></ion-icon>
+     </ion-button>
+     <ion-button color="secondary" (click)="showSendModal()">
+      <ion-icon name="send" ></ion-icon>
+     </ion-button>
+   </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-content [fullscreen]="false">
+  <div style="margin: 5%;">
+    <div class="text-center" style="text-align: center; margin-top: 20%; margin-bottom: 10%;">
+      <img src="assets/logo.png" width="25%" height="25%">
+      <h1 class="text-center">{{balance}} SMLT</h1>
+    </div>   
+    <form>
+      <ion-row>
+        <ion-col>
+          <label>{{address}}</label>
+          <ion-button type="submit" color="secondary" expand="block" (click)="transact()">Transaction History</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
 </ion-content>
