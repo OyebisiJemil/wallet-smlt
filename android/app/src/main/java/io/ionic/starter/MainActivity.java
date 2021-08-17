@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package com.walletsmlt.mobile;
 
 import com.getcapacitor.BridgeActivity;
 

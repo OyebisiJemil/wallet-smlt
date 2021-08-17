@@ -1,5 +1,5 @@
 {
-	"appId": "io.ionic.starter",
+	"appId": "com.walletsmlt.mobile",
 	"appName": "wallet-smlt",
 	"webDir": "www",
 	"bundledWebRuntime": false
