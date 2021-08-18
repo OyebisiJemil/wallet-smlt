@@ -6,4 +6,3 @@ phases:
       - ./gradlew
 artifacts:
   files:
-    - android/app/build/outputs/apk/debug
