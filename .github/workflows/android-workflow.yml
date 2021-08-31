@@ -2,7 +2,7 @@ name: Android CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, github-action-deployment ]
   pull_request:
     branches: [ master ]
 
@@ -22,5 +22,15 @@ jobs:
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
+    - name: do this
+      run: sudo apt-get install libpcap-dev
+    - name: Install capacitor
+      run: npm install @capacitor/cli
+    - name: jemil
+      run: npm run build
+    - name: sync project
+      run: npx cap sync
+    - name: update pnx
+      run: npx cap update android
     - name: Build with Gradle
-      run: ./gradlew build
+      run: cd android && ./gradlew build --warning-mode=all
