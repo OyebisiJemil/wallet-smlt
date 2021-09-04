@@ -38,8 +38,7 @@ export class Tab1Page {
   }
 
   async initializeContract() {    
-    this.address = "0xC8d424150A227B7bf9eA4988CF850062404e9BA0"; //await this.databaseService.get("address");
-    console.log(this.address);
+    this.address = "0xC8d424150A227B7bf9eA4988CF850062404e9BA0";
     this.sampleToken  = new this.web3.eth.Contract(this.sampleTokenABI, this.sampleTokenContractAddress);
     let result = await this.sampleToken.methods.balanceOf(this.address).call();
     this.balance = this.web3.utils.fromWei(result, "ether");
@@ -78,7 +77,6 @@ export class Tab1Page {
       }
       
       this.web3 = new Web3(window.ethereum);
-      //this.enable = this.enableMetaMaskAccount();
     }
   }
 }

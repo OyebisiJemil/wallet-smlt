@@ -6,7 +6,6 @@ import { HttpClientModule} from '@angular/common/http';
 import { SQLite } from '@ionic-native/sqlite/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-//import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { IonicStorageModule } from '@ionic/storage-angular';
